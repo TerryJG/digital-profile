@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Terrance Gibson</title>
+    <link rel="icon" type="image/x-icon" href="content\icons\favicon.ico">
+
+    <!-- Metadata for link preview -->
+    <meta property="og:title" content="Terrance Gibson | Digital Portfolio">
+    <meta property="og:description" content="Resume | Terrance Gibson, +1 (242) 807-1983, gibson.terrance.bs@gmail.com">
+    <meta property="og:image" content="content\icons\link_thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:url" content="https://madebyterrance.pages.dev/">
+    <meta name="theme-color" content="#212529">
+
+    <!-- jQuery -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome Fonts (for icons) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="css\resume.css">
+
+    <style>.main-container, .nav-wrapper {display: none;}</style> <!-- Prevents content from showing for a split second --> 
+    <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" --> 
+    <script src="./js/navbar.js"></script>
+
+
+</head>
+
+<body>
+    <div class="main-container resume-wrapper" id="resume" data-bs-spy="scroll" and data-bs-target="#resume-nav">
+
+        <section class="section header" id="header">
+            <section class="info-grid">
+                <div class="row">
+                    <div class="col">
+                        <div class="info-grid-col-1"
+                            style="display: flex; flex-direction: column; justify-content: center;">
+                            <h1>TERRANCE GIBSON</h1>
+                            <address>
+                                <p id="address">#7 Coral Harbour Close, Coral Harbour <br> Nassau, Bahamas</p>
+                                <p id="number">1 (242) 807-1983</p>
+                                <a id="email"
+                                    href="mailto:gibson.terrance.bs@gmail.com">gibson.terrance.bs@gmail.com</a>
+                            </address>
+                            <summary class="list-unstyled">
+                                <p id="overview">Self-motivated, versatile, and adaptable tertiary student with a
+                                    focus on technical, organizational, and written communication skills</p>
+                            </summary>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="info-wrapper" style="display: flex; align-items: self-start; text-align: left;">
+                            <img src="content\icons\invsnmedia-icon.png" alt="Frame Refined"
+                                style="width: 5rem; margin-right: 0.5rem;" draggable="false">
+                            <div class="description-wrapper">
+                                <p class="mb-0"><b>inVisioned Media</b> <br> Video Editing and Graphics Design</p>
+                                <a style="text-decoration: none;"
+                                    href="mailto:invisionedmedia.bs@gmail.com">invisionedmedia.bs@gmail.com<br></a>
+                                <a class="text-decoration-none fs-3 me-1" style="color: #ff0000;"
+                                    href="https://www.youtube.com/channel/UCVV652t2zYnQT_XH9IP5iuw">
+                                    <i class="fa-brands fa-youtube" id="youtube" title="YT/inVisionedMedia"
+                                        alt="Youtube - inVisionedMedia"></i>
+                                </a>
+                                <a class="text-decoration-none fs-3 me-1" style="color: #0866ff;"
+                                    href="https://www.facebook.com/inVsnMedia">
+                                    <i class="fa-brands fa-facebook" id="instagram" title="FB/inVisionedMedia"
+                                        alt="Facebook - inVisionedMedia"></i>
+                                </a>
+                                <a class="text-decoration-none fs-3 me-2" style="color: #833ab4;"
+                                    href="https://www.instagram.com/invsnmedia.bs/">
+                                    <i class="fa-brands fa-instagram" id="instagram" title="@invsnmedia.bs"
+                                        alt="Instagram - inVisionedMedia"></i>
+                                </a>
+                                <a class="text-decoration-none" style="color: #41e760"
+                                    href="https://linktr.ee/inVsnMedia">
+                                    <img src="content\icons\linktree-icon.png" id="linktree"
+                                        style="width: 22px; position: absolute; margin-top: 0.5rem;"
+                                        title="LnkTree/invsnmedia" alt="Linktree - inVisionedMedia">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="info-wrapper"
+                            style="display: flex; align-items: self-start; text-align: left; margin-top: 1rem;">
+                            <img src="content\icons\flexsiv-icon.png" alt="Frame Refined"
+                                style="width: 5rem; margin-right: 0.5rem;" draggable="false">
+                            <div class="description-wrapper">
+                                <p class="mb-0"><b>FlexSiv Software</b> <br> Web & Mobile Application Development</p>
+                                <a style="text-decoration: none;"
+                                    href="mailto:gibson.terrance.bs@gmail.com">gibson.terrance.bs@gmail.com<br></a>
+                                <a class="text-decoration-none" style="color: #41e760" href="">
+                                    <img src="content\icons\google-play-logo.png" id="google-play"
+                                        style="width: 30px; position: absolute; margin-top: 0.5rem;"
+                                        title="FlexSiv Software" alt="Google Play - FlexSiv Software">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="info-grid-col-2">
+                </div>
+
+            </section>
+        </section>
+
+        <section class="section education" id="education">
+            <h2 class="fw-bold mb-5">EDUCATION</h2>
+            <div class="row gx-3 mb-3">
+                <div class="col-md-6 me-3">
+                    <div class="education-list">
+                        <h3 class="fw-bold">BAHAMAS TECHNICAL & VOCATIONAL INSTITUTE</h3>
+                        <p><b>Software Enginnering</b>, Associate of Applied Science</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>AUGUST 2022 – Present</p>
+                </div>
+            </div>
+
+            <div class="row gx-3 mb-3">
+                <div class="col-md-6 me-3">
+                    <div class="education-list">
+                        <h3 class="fw-bold">UNIVERSITY OF THE BAHAMAS</h3>
+                        <p><b>English Literature</b>, Bachelor of Liberal Arts</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>JUNE 2016 – MAY 2022 (Deferred)</p>
+                </div>
+            </div>
+
+            <div class="row gx-3 mb-3">
+                <div class="col-md-6 me-3">
+                    <div class="education-list">
+                        <h3 class="fw-bold">AKHEPRAN INTERNATIONAL ACADEMY</h3>
+                        <p><b>High School Diploma</b></p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>JUNE 2015</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section experience" id="experience">
+            <h2 class="fw-bold mb-5">EXPERIENCE</h2>
+            <div class="row gx-3 mb-3">
+                <div class="col-md-6 me-3">
+                    <div class="experience-list">
+                        <h3 class="fw-bold">ZCOM SOLUTIONS (CONTRACT)</h3>
+                        <p>PREPPER</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>NOVEMBER 2022 – DECEMBER 2022</p>
+                </div>
+            </div>
+
+            <div class="row gx-3 mb-3">
+                <div class="col-md-6 me-3">
+                    <div class="experience-list">
+                        <h3 class="fw-bold">BAHAMAS HUMANE SOCIETY</h3>
+                        <p>VOLUNTEER WORKER</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>OCTOBER 2022</p>
+                </div>
+            </div>
+
+            <div class="row gx-3 mb-3">
+                <div class="col-md-6 me-3">
+                    <div class="experience-list">
+                        <h3 class="fw-bold">MINISTRY OF EDUCATION</h3>
+                        <p>CLERICAL ASSISTANT</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>JUNE 2019 – JULY 2019</p>
+                </div>
+            </div>
+
+            <div class="row gx-3 mb-3">
+                <div class="col-md-6 me-3">
+                    <div class="experience-list">
+                        <h3 class="fw-bold">ELIZABETH ESTATES POST OFFICE</h3>
+                        <p>OFFICE ASSISTANT</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>AUGUST 2014 – SEPTEMBER 2014</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section abilities" id="abilities">
+            <h2 class="fw-bold">SKILLS</h2>
+            <ul class="skills mb-1">
+                <li>Effective in written communication</li>
+                <li>Adaptable to dynamic work environments while quickly acquiring new proficiencies</li>
+                <li>Capable in organizational efficiency and time management</li>
+                <!-- <li>Advanced experience with Microsoft Office suite, including Word, PowerPoint, Access, and Excel</li>
+                <li>Comprehensive knowledge of computer software and hardware, capable of operating, diagnosing, and
+                    repairing Windows and Linux operating systems</li> -->
+            </ul>
+            <hr width="50%">
+
+            <ul class="list-unstyled">
+                <li class="fw-bold fs-3">Creative Works</li>
+                <li>Expertise in short and long-form video content, with proficiency in graphics design for flyers.</li>
+                <div class="creative-works-icons mt-2 d-flex align-items-center mb-0">
+                    <img style="width: 40px;" src="content\icons\adobe-premiere-pro-cc-icon.svg"
+                        title="Adobe Premiere Pro" alt="Adobe Premiere Pro">
+                    <img style="width: 40px;" src="content\icons\adobe-photoshop-cc-icon.svg" title="Adobe Photoshop"
+                        alt="Adobe Photoshop">
+                    <img style="width: 40px;" src="content\icons\sony-vegas-logo-icon.svg" title="Sony Vegas Pro"
+                        alt="Sony Vegas Pro">
+                    <img style="width: 40px;" src="content\icons\icons8-hitfilm-express.svg" title="Hitfilm Express"
+                        alt="Hitfilm Express">
+                    <img style="width: 40px;" src="content\icons\capcut-icon.png" title="Capcut" alt="Capcut">
+                    <img style="width: 40px;" src="content\icons\remotion-icon.png" title="Remotion" alt="Remotion">
+                </div>
+            </ul>
+
+            <hr width="50%">
+
+            <ul class="list-unstyled">
+                <li class="fw-bold fs-3">Programming Languages & Libraries</li>
+                <li>Working knowledge and experience in web and mobile applications</li>
+                <div class="mt-2 d-flex align-items-center mb-0 creative-works-icons" style="gap: 1rem;">
+                    <i class="fa-brands fa-html5" style="font-size: 2.5rem; color: #ff6347;" title="HTML5"
+                        alt="HTML5"></i>
+                    <i class="fa-brands fa-css3-alt" style="font-size: 2.5rem; color: #2862e9;" title="CSS"
+                        alt="CSS"></i>
+                    <i class="fa-brands fa-js" style="font-size: 2.5rem; color: #f0db4f;" title="Javascript"
+                        alt="Javascript"></i>
+                    <!-- <img style="width: 2.5rem;" src="content\icons\icons8-python.svg" title="Python" alt="Python"> -->
+                    <span class="fs-2">•</span>
+                    <i class="fa-brands fa-bootstrap" style="font-size: 2.5rem; color: #8712f7;" title="Bootstrap"
+                        alt="Bootstrap"></i>
+                    <!-- <i class="fa-brands fa-sass" style="font-size: 2.5rem; color: #c66394;" title="SASS" alt="SASS"></i> -->
+                    <i class="fa-brands fa-react" style="font-size: 2.5rem; color: #4edaec" title="React"
+                        alt="React"></i>
+
+                </div>
+            </ul>
+        </section>
+
+
+        <section class="section outreach" id="outreach">
+            <h2 class="fw-bold">OUTREACH</h2>
+
+            <div class="outreach-list">
+                <h3>Community Service - Centreville Seventh Day Adventist Church</h3>
+                <ul>
+                    <li>Compiled and distributed food packages for congregational and community members.</li>
+                    <li>Provided support as a team assistant and event coordinator for summer school and church events.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="outreach-list">
+                <h3>Former member of Rotaract Club of the University of the Bahamas</h3>
+                <ul>
+                    <li>Participated in several community initiative projects.</li>
+                    <li>Worked collaboratively with club members in planning and executing community projects</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section extra-info" id="extra-info">
+            <h2 class="fw-bold">ADDITIONAL INFORMATION</h2>
+
+            <div class="extra-info-list">
+                <h3>Religion</h3>
+                <p>Christianity: Seventh-day Adventist</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

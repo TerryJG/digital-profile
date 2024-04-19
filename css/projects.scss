@@ -1,0 +1,356 @@
+////////// ROOT ////////////
+/* Fira Sans Font - Header */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Roboto Font - Description */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    background: rgb(255, 234, 255);
+    background: linear-gradient(80deg, rgba(255, 251, 230, 0.99) 10%, rgba(233, 235, 253, 0.95) 70%);
+}
+
+
+@keyframes animateBgPreloader {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.spinner-border {
+    width: 75px;
+    height: 75px;
+}
+
+
+////////// MEDIA QUERIES //////////
+.mobile-hide {
+    @media all and (max-width: 768px) {
+        display: none;
+    }
+}
+
+.desktop-hide {
+    @media all and (min-width: 768px) {
+        display: none;
+    }
+}
+
+
+////////// HEADER //////////
+.header {
+    text-align: center;
+
+    h1 {
+        // Page Title (Projects)
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 4rem;
+
+        transition: all ease 0.5s;
+    }
+
+    .category-section {
+        text-align: center;
+
+        button {
+            // Dotted spacing
+            display: inline-block;
+        }
+    }
+}
+
+
+////////// CATEGORIES //////////
+.category-items {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+
+    .button-wrapper {
+        position: relative;
+        width: fit-content;
+        text-wrap: nowrap;
+        border: 1px solid #000;
+        border-radius: 7px;
+        padding: 8px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .dropdown-menu {
+        z-index: 10 !important;
+    }
+
+    #playIcon {
+        margin-right: 0.3rem;
+        cursor: pointer;
+    }
+
+    .mobile-category-btn {
+        width: 350px;
+        $theme-color: #5568d3;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover {
+            background-color: lighten($theme-color, 5%);
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+
+        // display: flex !important;
+        // flex-direction: column !important;
+
+        i {
+            font-size: 1.4rem;
+        }
+
+        #showCategory {
+            font-size: 1.3rem;
+        }
+    }
+
+
+    // Category Items Styling
+    .apple-music-wrapper {
+        overflow: hidden;
+        $theme-color: #fc3c44;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: #fc3c44;
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    // wrapper ensures that the span classes inside the psudeo button are clickable,
+    // and doesn't trigger both classes at once
+    .behold-the-lamb-wrapper {
+        $theme-color: #eeaf1b;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: darken($theme-color, 3%);
+            border-color: darken($theme-color, 5%);
+            ;
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    .challenge-centric-wrapper {
+        $theme-color: #841bee;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: darken($theme-color, 0%);
+            border-color: darken($theme-color, 0%);
+            ;
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    .foundation-of-triathletes-wrapper {
+        $theme-color: #56e72a;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: darken($theme-color, 10%);
+            border-color: darken($theme-color, 10%);
+            ;
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    .god-our-only-hope-wrapper {
+        $theme-color: #7100db;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: darken($theme-color, 0%);
+            border-color: darken($theme-color, 0%);
+            ;
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    .sounds-of-africa-wrapper {
+        $theme-color: #eebb22;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: darken($theme-color, 5%);
+            border-color: darken($theme-color, 5%);
+            ;
+            color: $color-black;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    .toastmasters-wrapper {
+        $theme-color: #ee2244;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: darken($theme-color, 10%);
+            border-color: darken($theme-color, 10%);
+            ;
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+
+    .github-wrapper {
+        $theme-color: #1b1b1b;
+        $color-white: #fff;
+        $color-black: #000;
+        border-color: $theme-color;
+        color: $theme-color;
+        transition: all ease-in-out 0.2s;
+
+        &:hover, &.active {
+            background-color: darken($theme-color, 10%);
+            border-color: darken($theme-color, 10%);
+            ;
+            color: $color-white;
+            transition: all ease-in-out 0.2s;
+        }
+    }
+}
+
+
+////////// CONTAINER HOLDING GRID-WRAPPER //////////
+// needed for sizing & positioning
+.max-width-container {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+
+////////// GRID //////////
+.grid-wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    grid-auto-rows: 144px;
+    grid-auto-flow: dense;
+
+    @media all and (min-width: 320px) and (max-width: 767px) {
+        grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
+        grid-auto-rows: 100px;
+    }
+
+    @media all and (min-width: 768px) {
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+        grid-auto-rows: 144px;
+    }
+
+    i {
+        // Icons
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 8px;
+        border-bottom-right-radius: 10px;
+        font-size: 20px;
+        color: rgb(228, 228, 228);
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+        background-color: #000000aa;
+    }
+}
+
+.grid-wrapper .wide {
+    grid-column: span 2;
+}
+
+.grid-wrapper .tall {
+    grid-row: span 2;
+}
+
+.grid-wrapper .big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.grid-wrapper>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lc-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-wrapper>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-wrapper .video {
+    grid-column: span 1.8;
+}
+
+////////// GRID ITEMS //////////
+.fancybox img {
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    min-width: 100%;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
