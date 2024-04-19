@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio - Terrance Gibson</title>
+    <link rel="icon" type="image/x-icon" href="content\icons\favicon.ico">
+
+    <!-- Metadata for link preview -->
+    <meta property="og:title" content="Terrance Gibson | Digital Portfolio">
+    <meta property="og:description" content="Digital portfolio of Terrance Gibson | Owner of FrameRefined Designs & FlexSiv Software | +1 (242) 807-1983, gibson.terrance.bs@gmail.com">
+    <meta property="og:image" content="content\icons\link_thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:url" content="https://madebyterrance.pages.dev/">
+ 
+    <!-- jQuery 3.7.1 -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css\index.css">
+
+    <style>.main-container, .nav-wrapper {display: none;}</style> <!-- Prevents content from showing for a split second --> 
+    <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" -->
+</head>
+
+<body>
+    <!-- Video Background -->
+    <video class="hide-on-mobile" autoplay muted loop id="bg-video">
+        <source src="content\challenge-centric\video\team-aquarius_vp8.webm" type="video/webm">
+    </video>
+
+    <!-- Page Content -->
+    <section class="overview fade-out  text-center">
+        <div class="name-header">
+            <h1 class="display-3 fw-bold" id="name">Terrance Gibson</h1>
+            <address class="lead" id="email"><a
+                    href="mailto:gibson.terrance.bs@gmail.com">gibson.terrance.bs@gmail.com</a></address>
+            <p class="lead" id="number">+1 242 807-1983</p>
+        </div>
+
+        <div class="description  buttons  col-lg-6 mx-auto">
+            <p class="lead mb-4">Freelance Video Editor, Web Developer & Graphics Designer</p>
+            <div class="button-links d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a type="button" class="btn btn-outline-dark" href="projects.html"
+                    onmouseover="this.style.color='#ffc107'" onmouseout="this.style.color='#202020'">VIEW PROJECTS</a>
+            </div>
+        </div>
+
+        <div class="social-media-links">
+            <a href="https://github.com/TerryJG">
+                <i class="fa-brands fa-github" id="github" alt="Github"></i>
+            </a>
+            <a href="https://www.facebook.com/inVsnMedia">
+                <i class="fa-brands fa-facebook" id="facebook" alt="Facebook"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCVV652t2zYnQT_XH9IP5iuw">
+                <i class="fa-brands fa-youtube" id="youtube" alt="YouTube"></i>
+            </a>
+            <a href="https://www.instagram.com/invsnmedia.bs/">
+                <i class="fa-brands fa-instagram" id="instagram" alt="Instagram"></i>
+            </a>
+        </div>
+
+        <div class="arrow-indicator">
+            <i class="fa-solid fa-angle-up"></i>
+            <p>Swipe up to view projects</p>
+        </div>
+    </section>
+
+    <!-- Change page when user swipes up; add fade out effect as user is swiping up -->
+    <script>
+        const redirectPercentage = 28; // Pecent needed to change page
+        const body = document.querySelector('body');
+        let startY = 0;
+        let endY = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            startY = e.touches[0].clientY;
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            endY = e.touches[0].clientY;
+
+            const swipeDistance = startY - endY; // Calculate vertical distance of swipe
+
+            if (swipeDistance > 0) {
+
+                const swipePercentage = (swipeDistance / window.innerHeight) * 100; // Calculate percentage of swipe
+
+
+                const opacity = Math.max(35 / swipePercentage);  // Adjust opacity based on the percentage
+                body.style.filter = `opacity(${opacity}%)`;
+
+                // Checks if user swiped up beyond the threshold
+                if (swipePercentage >= redirectPercentage) {
+                    window.location.href = 'projects.html';
+                }
+            } else {
+                body.style.filter = 'opacity(100%)';
+            }
+        });
+
+        document.addEventListener('touchend', () => {
+            // Reset opacity
+            body.style.filter = 'opacity(100%)';
+        });
+    </script>
+
+    <script>
+        async function fetchAndChangeVideo() {
+            const response = await fetch('content\\project-list.json');
+            const jsonData = await response.json();
+
+            const bgVideo = document.getElementById('bg-video');
+
+            // Filter videos based on the data-featured attribute
+            const videoItems = jsonData.videos
+                .filter(video => video['video-item']['data-featured'] === 'main')
+                .map(video => video['video-item']['hoverPreview']);
+
+            let index = 0;
+
+            setInterval(() => {
+                bgVideo.src = videoItems[index];
+
+                index = (index + 1) % videoItems.length;
+            }, 10000); // 10 seconds
+        }
+        document.addEventListener('DOMContentLoaded', fetchAndChangeVideo);
+    </script>
+
+</body>
+</html>
