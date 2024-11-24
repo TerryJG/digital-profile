@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Navigation links configuration
         const navLinks = [
-            { href: 'index.html', iconClass: 'fa fa-home', text: 'Home' },
-            { href: 'projects.html', iconClass: 'fa-solid fa-play', iconClass2: 'fa-solid fa-image', text: 'Projects' },
-            { href: 'credits.html', iconClass: 'fa-solid fa-note-sticky', text: 'Credits' }
+            { href: '/index.html', iconClass: 'fa fa-home', text: 'Home' },
+            { href: '/projects.html', iconClass: 'fa-solid fa-play', iconClass2: 'fa-solid fa-image', text: 'Projects' },
+            { href: '/credits.html', iconClass: 'fa-solid fa-note-sticky', text: 'Credits' }
         ];
 
         // Page styles configuration

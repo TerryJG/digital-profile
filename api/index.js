@@ -73,11 +73,15 @@ app.get('/', (req, res) => {
 
 // Fallback route
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'), (err) => {
-        if (err) {
-            res.status(500).send(err);
-        }
-    });
+    if (req.path.endsWith('.html')) {
+        res.sendFile(path.join(__dirname, '..', 'dist', req.path), (err) => {
+            if (err) {
+                res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
+            }
+        });
+    } else {
+        res.sendFile(path.join(__dirname, '..', 'dist', 'index.html'));
+    }
 });
 
 // MongoDB connection
