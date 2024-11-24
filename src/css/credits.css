@@ -7,7 +7,8 @@ body {
   background: linear-gradient(80deg, rgba(238, 252, 241, 0.99) 10%, rgba(253, 247, 255, 0.95) 70%);
 }
 
-body, .credit-wrapper {
+body,
+.credit-wrapper {
   font-family: "Poppins", sans-serif;
 }
 
@@ -16,15 +17,15 @@ h2 {
 }
 
 a {
-  text-decoration: none;
-  color: rgb(26, 26, 26);
+  text-decoration: none !important;
+  color: rgb(26, 26, 26) !important;
 }
 
 #bootstrap {
   transition: all ease-in 0.2s;
 }
 #bootstrap:hover {
-  color: #8712f7;
+  color: #8712f7 !important;
   transition: all ease-out 0.2s;
 }
 
@@ -32,7 +33,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #sass:hover {
-  color: #c66394;
+  color: #c66394 !important;
   transition: all ease-out 0.2s;
 }
 
@@ -40,7 +41,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #gradient-generator:hover {
-  color: #ffc107;
+  color: #ffc107 !important;
   transition: all ease-out 0.2s;
 }
 
@@ -48,7 +49,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #fancybox-1:hover {
-  color: rgb(26, 26, 26);
+  color: rgb(26, 26, 26) !important;
   transition: all ease-out 0.2s;
 }
 #fancybox-1:hover #fancybox-2 {
@@ -56,7 +57,7 @@ a {
   transition: all ease-out 0.2s;
 }
 #fancybox-1 :not(:hover) {
-  color: rgb(26, 26, 26);
+  color: rgb(26, 26, 26) !important;
   transition: all ease-out 0.2s;
 }
 
@@ -64,7 +65,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #font-awesome:hover {
-  color: #4f89d0;
+  color: #4f89d0 !important;
   transition: all ease-out 0.2s;
 }
 
@@ -72,7 +73,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #fullpage:hover {
-  color: #f56443;
+  color: #f56443 !important;
   transition: all ease-out 0.2s;
 }
 
@@ -80,15 +81,15 @@ a {
   transition: all ease-in 0.2s;
 }
 #live-canvas-1:hover {
-  color: #25C6DA;
+  color: #25c6da;
   transition: all ease-in 0.2s;
 }
 #live-canvas-1:hover #live-canvas-2 {
-  color: #E83F8C;
+  color: #e83f8c;
   transition: all ease-in 0.2s;
 }
 #live-canvas-1 :not(:hover) {
-  color: rgb(26, 26, 26);
+  color: rgb(26, 26, 26) !important;
   transition: all ease-in 0.2s;
 }
 
@@ -96,7 +97,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #mix-it-up:hover {
-  color: #51C9E5;
+  color: #51c9e5 !important;
   transition: all ease-out 0.2s;
 }
 
@@ -104,7 +105,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #site-grounds:hover {
-  color: #96cb4c;
+  color: #96cb4c !important;
   transition: all ease-out 0.2s;
 }
 
@@ -112,7 +113,7 @@ a {
   transition: all ease-in 0.2s;
 }
 #cloudflare:hover {
-  color: #f38020;
+  color: #f38020 !important;
   transition: all ease-out 0.2s;
 }
 
@@ -120,6 +121,6 @@ a {
   transition: all ease-in 0.2s;
 }
 #splide:hover {
-  color: #84bd34;
+  color: #84bd34 !important;
   transition: all ease-out 0.2s;
 }/*# sourceMappingURL=credits.css.map */

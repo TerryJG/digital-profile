@@ -1,0 +1,88 @@
+[
+  {
+    "dataFancybox": "video-gallery",
+    "contentType": "video",
+    "itemType": "Motion Graphics",
+    "category": "behold-the-lamb",
+    "categoryId": {
+      "$oid": "6641d1fc5115f5281596eca3"
+    },
+    "icons": ["adobe-premiere-pro"],
+    "data-date": "2023-12-23",
+    "title": "Adam and Eve Illustration",
+    "subTitle": "Complimentary assets for Behold, The Lamb",
+    "isFeatured": false,
+    "isArchived": false,
+    "imgSrc": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/thumbnails/behd-adam-and-eve.webp",
+    "fallbackImgSrc": "",
+    "thumbnailImageAlt": "Adam and Eve",
+
+    "videoSrc": "https://youtu.be/Yvy5IXB32Wc",
+    "fallbackVideoSrc": "",
+    "videoPreview": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/behd-adam-and-eve.webm"
+  },
+  {
+    "dataFancybox": "video-gallery",
+    "contentType": "video",
+    "itemType": "Promotion Video",
+    "category": "behold-the-lamb",
+    "categoryId": {
+      "$oid": "6641d1fc5115f5281596eca3"
+    },
+    "icons": ["adobe-after-effects"],
+    "data-date": "2023-12-23",
+    "title": "Behold, The Lamb",
+    "subTitle": "Official video promo for 'Behold, The Lamb', a special production held at Centreville SDA Church, Nassau, Bahamas",
+    "isFeatured": true,
+    "isArchived": false,
+    "imgSrc": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/thumbnails/behd-video-promo.webp",
+    "fallbackImgSrc": "",
+    "thumbnailImageAlt": "Behold, The Lamb Promo",
+    "videoSrc": "https://youtu.be/LhrvW305fgY",
+    "fallbackVideoSrc": "",
+    "videoPreview": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/behd-promo-video.webm"
+  },
+  {
+    "dataFancybox": "video-gallery",
+    "contentType": "video",
+
+    "itemType": "Motion Graphics",
+    "category": "behold-the-lamb",
+    "categoryId": {
+      "$oid": "6641d1fc5115f5281596eca3"
+    },
+    "icons": ["adobe-premiere-pro"],
+    "data-date": "2023-12-23",
+    "title": "Moses and the Burning Bush Illustration",
+    "subTitle": "Complimentary assets for Behold, The Lamb",
+    "isFeatured": false,
+    "isArchived": false,
+    "imgSrc": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/thumbnails/behd-moses-and-the-burning-bush.webp",
+    "fallbackImgSrc": "",
+    "thumbnailImageAlt": "Moses and the Burning Bush",
+    "videoSrc": "https://youtu.be/YOSgjhF0-O4",
+    "fallbackVideoSrc": "",
+    "videoPreview": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/behd-moses-and-the-burning-bush.webm"
+  },
+  {
+    "dataFancybox": "video-gallery",
+    "contentType": "video",
+    "itemType": "Motion Graphics",
+    "category": "behold-the-lamb",
+    "categoryId": {
+      "$oid": "6641d1fc5115f5281596eca3"
+    },
+    "icons": ["adobe-premiere-pro"],
+    "data-date": "2023-12-23",
+    "title": "Old Temple in Jerusalem Illustration",
+    "subTitle": "Complimentary assets for Behold, The Lamb",
+    "isFeatured": false,
+    "isArchived": false,
+    "imgSrc": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/thumbnails/behd-old-temple.webp",
+    "fallbackImgSrc": "",
+    "thumbnailImageAlt": "Old Temple in Jerusalem",
+    "videoSrc": "https://youtu.be/Yvy5IXB32Wc",
+    "fallbackVideoSrc": "",
+    "videoPreview": "https://tjg-portfolio-db.vercel.app/behold-the-lamb/videos/behd-temple-in-jerusalem.webm"
+  }
+]

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Portfolio - Terrance Gibson</title>
-    <link rel="icon" type="image/x-icon" href="content\icons\favicon.ico">
+    <link rel="icon" type="image/x-icon" href="src/content/icons/favicon.ico">
 
     <!-- Metadata for link preview -->
     <meta property="og:title" content="Terrance Gibson | Digital Portfolio">
@@ -28,7 +28,7 @@
     <!-- Font Awesome Fonts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
 
-    <link rel="stylesheet" href="css\index.css">
+    <link rel="stylesheet" href="src/css/index.css">
 
     <style>
         .main-container,
@@ -36,12 +36,12 @@
             display: none;
         }
     </style> <!-- Prevents content from showing for a split second -->
-    <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" -->
+    <script src="src/js/preloader.js"></script> <!-- JS will handle changing display to "block" -->
 </head>
 
 <body>
     <!-- Video Background -->
-    <video class="hide-on-mobile" autoplay muted loop id="bg-video">
+    <video class="hide-on-mobile" preload="auto" autoplay muted loop id="bg-video">
         <source src="content\challenge-centric\video\team-aquarius_vp8.webm" type="video/webm">
     </video>
 
@@ -121,28 +121,48 @@
         });
     </script>
 
-    <script>
+    <script type="module">
+        import axios from 'axios';
+
         async function fetchAndChangeVideo() {
-            const response = await fetch('content\\project-list.json');
-            const jsonData = await response.json();
+            try {
+                const response = await axios.get('/portfolio/videos/featured');
+                const responseData = response.data;
 
-            const bgVideo = document.getElementById('bg-video');
+                if (responseData && Array.isArray(responseData)) {
+                    const bgVideo = document.getElementById('bg-video');
+                    const videoPreviews = responseData.map(video => video.videoPreview);
 
-            // Filter videos based on the data-featured attribute
-            const videoItems = jsonData.videos
-                .filter(video => video['video-item']['data-featured'] === 'main')
-                .map(video => video['video-item']['hoverPreview']);
+                    let index = 0;
 
-            let index = 0;
+                    setInterval(() => {
+                        const nextIndex = (index + 1) % videoPreviews.length;
 
-            setInterval(() => {
-                bgVideo.src = videoItems[index];
+                        const nextVideoPreview = videoPreviews[nextIndex];
+                        const nextVideoElement = document.createElement('source');
+                        nextVideoElement.src = nextVideoPreview;
+                        nextVideoElement.type = 'video/webm';
 
-                index = (index + 1) % videoItems.length;
-            }, 10000);
+                        bgVideo.appendChild(nextVideoElement);
+
+                        const currentVideoElement = bgVideo.querySelector('source');
+                        if (currentVideoElement) {
+                            bgVideo.removeChild(currentVideoElement);
+                        }
+
+                        index = nextIndex;
+                    }, 10000);
+                } else {
+                    console.error('Invalid data structure:', responseData);
+                }
+            } catch (error) {
+                console.error('Error fetching videos:', error);
+            }
         }
+
         document.addEventListener('DOMContentLoaded', fetchAndChangeVideo);
     </script>
 
 </body>
+
 </html>

@@ -17,22 +17,6 @@ $(document).ready(function () {
 			display: {
 				left: [],
 				middle: [
-					/* All available option buttons. Can add custom buttons
-					  e.g. Twitter share button; refer to documentation. */
-
-					// "infobar"
-					// "iterateZoom",
-					// "zoomIn",
-					// "zoomOut",
-					// "toggle1to1",
-					// "rotateCCW",
-					// "rotateCW",
-					// "flipX",
-					// "flipY",
-					// "slideshow", 
-					// "thumbs", 
-					// "close",
-					// "fullscreen",
 				],
 				right: ["close"],
 			},
@@ -57,21 +41,8 @@ $(document).ready(function () {
 			display: {
 				left: [],
 				middle: [
-					/* All available option buttons. Can add custom buttons
-					  e.g. Twitter share button; refer to documentation. */
-
-					// "infobar"
 					"iterateZoom",
-					// "zoomIn",
-					// "zoomOut",
-					// "toggle1to1",
-					// "rotateCCW",
-					// "rotateCW",
-					// "flipX",
-					// "flipY",
-					// "slideshow", 
 					"thumbs",
-					// "close",
 					"fullscreen",
 				],
 				right: ["close"],
@@ -95,22 +66,6 @@ $(document).ready(function () {
 			display: {
 				left: [],
 				middle: [
-					/* All available option buttons. Can add custom buttons
-					  e.g. Twitter share button; refer to documentation. */
-
-					// "infobar"
-					// "iterateZoom",
-					// "zoomIn",
-					// "zoomOut",
-					// "toggle1to1",
-					// "rotateCCW",
-					// "rotateCW",
-					// "flipX",
-					// "flipY",
-					// "slideshow", 
-					// "thumbs", 
-					// "close",
-					// "fullscreen",
 				],
 				right: ["close"],
 			},
