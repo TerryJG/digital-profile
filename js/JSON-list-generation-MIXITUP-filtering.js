@@ -65,15 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
           ${webHtml}
         `;
 
-        // click event to change bg color with data-attribute 'bgcolor'
-        // document.querySelectorAll('[data-filter]').forEach(function (filterItem) {
-        //   filterItem.addEventListener('click', function () {
-        //     var bgColor = filterItem.dataset.bgColor || 'rgb(255, 235, 206)'; // Default color if not specified
-        //     document.body.style.transition = 'background 0.5s ease'; // Add transition property
-        //     document.body.style.background = bgColor;
-        //   });
-        // });
-
         // Mixitup Initialization
         var mixer = mixitup(projectsContainer, {
           selectors: {

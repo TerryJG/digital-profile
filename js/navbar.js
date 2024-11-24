@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-
         const icon1 = document.createElement('i');
         icon1.className = link.iconClass;
         icon1.setAttribute('aria-hidden', 'true');

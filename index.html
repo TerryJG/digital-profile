@@ -9,11 +9,12 @@
 
     <!-- Metadata for link preview -->
     <meta property="og:title" content="Terrance Gibson | Digital Portfolio">
-    <meta property="og:description" content="Digital portfolio of Terrance Gibson | Owner of FrameRefined Designs & FlexSiv Software | +1 (242) 807-1983, gibson.terrance.bs@gmail.com">
+    <meta property="og:description"
+        content="Digital portfolio of Terrance Gibson | Owner of FrameRefined Designs & FlexSiv Software | +1 (242) 807-1983, gibson.terrance.bs@gmail.com">
     <meta property="og:image" content="content\icons\link_thumbnail.jpg">
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:url" content="https://madebyterrance.pages.dev/">
- 
+
     <!-- jQuery 3.7.1 -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
@@ -29,7 +30,12 @@
 
     <link rel="stylesheet" href="css\index.css">
 
-    <style>.main-container, .nav-wrapper {display: none;}</style> <!-- Prevents content from showing for a split second --> 
+    <style>
+        .main-container,
+        .nav-wrapper {
+            display: none;
+        }
+    </style> <!-- Prevents content from showing for a split second -->
     <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" -->
 </head>
 
@@ -58,6 +64,7 @@
             </div>
         </div>
 
+        <!-- Social Media Links -->
         <div class="social-media-links">
             <a href="https://github.com/TerryJG">
                 <i class="fa-brands fa-github" id="github" alt="Github"></i>
@@ -81,7 +88,7 @@
 
     <!-- Change page when user swipes up; add fade out effect as user is swiping up -->
     <script>
-        const redirectPercentage = 28; // Pecent needed to change page
+        const redirectPercentage = 28; // Percent needed to change page
         const body = document.querySelector('body');
         let startY = 0;
         let endY = 0;
@@ -92,13 +99,10 @@
 
         document.addEventListener('touchmove', (e) => {
             endY = e.touches[0].clientY;
-
             const swipeDistance = startY - endY; // Calculate vertical distance of swipe
 
             if (swipeDistance > 0) {
-
                 const swipePercentage = (swipeDistance / window.innerHeight) * 100; // Calculate percentage of swipe
-
 
                 const opacity = Math.max(35 / swipePercentage);  // Adjust opacity based on the percentage
                 body.style.filter = `opacity(${opacity}%)`;
@@ -113,8 +117,7 @@
         });
 
         document.addEventListener('touchend', () => {
-            // Reset opacity
-            body.style.filter = 'opacity(100%)';
+            body.style.filter = 'opacity(100%)'; // Reset opacity
         });
     </script>
 
@@ -136,7 +139,7 @@
                 bgVideo.src = videoItems[index];
 
                 index = (index + 1) % videoItems.length;
-            }, 10000); // 10 seconds
+            }, 10000);
         }
         document.addEventListener('DOMContentLoaded', fetchAndChangeVideo);
     </script>

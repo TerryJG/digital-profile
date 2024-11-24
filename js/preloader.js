@@ -16,6 +16,7 @@ const preloaderPageData = {
         class: "text-success"
     },
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     const body = document.getElementsByTagName("body")[0];
     const currentPage = window.location.pathname.split('/').pop();
@@ -69,7 +70,7 @@ window.addEventListener('load', () => {
         }, 800); // fade-out duration
     }
 
-    // Unhine content once preloader is hidden/done
+    // Un-hide content once preloader is hidden/done
     const overview = document.querySelector('.overview'); // This is for index.html main container
     const mainContainer = document.querySelector('.main-container');
     const navWrapper = document.querySelector('.nav-wrapper');

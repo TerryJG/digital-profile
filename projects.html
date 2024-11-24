@@ -9,13 +9,14 @@
 
     <!-- Metadata for link preview -->
     <meta property="og:title" content="Terrance Gibson | Digital Portfolio">
-    <meta property="og:description" content="Digital portfolio - Terrance Gibson, FrameRefined Designs & FlexSiv Software | +1 (242) 807-1983, gibson.terrance.bs@gmail.com">
+    <meta property="og:description"
+        content="Digital portfolio - Terrance Gibson, FrameRefined Designs & FlexSiv Software | +1 (242) 807-1983, gibson.terrance.bs@gmail.com">
     <meta property="og:image" content="content\icons\link_thumbnail.jpg">
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:url" content="https://madebyterrance.pages.dev/">
     <meta name="theme-color" content="#212529">
 
-    <!-- jQuery (damn near everything needs jQuery as a dependency) -->
+    <!-- jQuery 3.7.1 -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
 
     <!-- Bootstrap 5.2.3 -->
@@ -28,7 +29,6 @@
     <!-- Fancybox 5 (Video & Image Gallery) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script>
-    <!-- Fancybox Settings for Video, Image, & Web Gallery -->
 
     <!-- NinjaBootstrap (needed for gallery) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css"
@@ -47,8 +47,13 @@
 
     <link rel="stylesheet" href="css\projects.css">
 
-    <style>.main-container, .nav-wrapper {display: none;}</style> <!-- Prevents content from showing for a split second --> 
-    <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" --> 
+    <style>
+        .main-container,
+        .nav-wrapper {
+            display: none;
+        }
+    </style> <!-- Prevents content from showing for a split second -->
+    <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" -->
     <script src="./js/navbar.js"></script>
 </head>
 
@@ -64,7 +69,6 @@
                 <li class="btn filter" data-filter="all">All Projects</li>
             </ul>
         </header>
-
 
         <!-- Mobile Sidebar -->
         <div class="mobile-category-items-wrapper  offcanvas offcanvas-start  vh-100 w-100" data-bs-scroll="true"
@@ -321,4 +325,5 @@
     <script type="text/javascript" src="./js/thumbnail-hover.js">
     </script>
 </body>
+
 </html>
