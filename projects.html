@@ -1,324 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portfolio Showcase - Terrance Gibson</title>
-    <link rel="icon" type="image/x-icon" href="content\icons\favicon.ico">
+    <!-- JQuery -->
+    <script type="module" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Metadata for link preview -->
-    <meta property="og:title" content="Terrance Gibson | Digital Portfolio">
-    <meta property="og:description" content="Digital portfolio - Terrance Gibson, FrameRefined Designs & FlexSiv Software | +1 (242) 807-1983, gibson.terrance.bs@gmail.com">
-    <meta property="og:image" content="content\icons\link_thumbnail.jpg">
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:url" content="https://madebyterrance.pages.dev/">
-    <meta name="theme-color" content="#212529">
+    <!-- Header metadata -->
+    <script type="module" src="src/js/header.js"></script>
 
-    <!-- jQuery (damn near everything needs jQuery as a dependency) -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- Bootstrap 5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <!-- Bootstrap 5.2.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <!-- MixitUp v3 (Filtering & Sorting) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Fancybox 5 (Video & Image Gallery) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script>
-    <!-- Fancybox Settings for Video, Image, & Web Gallery -->
 
     <!-- NinjaBootstrap (needed for gallery) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css"
-        media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
 
     <!-- Dynamically generates HTML structure from project-list.json -->
-    <script type="text/javascript" src=js\JSON-list-generation-MIXITUP-filtering.js></script>
-
-    <!-- MixitUp v3 (Filtering & Sorting) -->
-    <script src="libraries\patrickkunka-mixitup-61dac05\dist\mixitup.min.js"></script>
+    <script type="module" src="src/js/projects.fetchContent-mixItUp-filtering.js"></script>
 
     <!-- Font Awesome Fonts (for icons) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link rel="stylesheet" href="css\projects.css">
+    <link rel="stylesheet" href="src/css/projects.css">
 
-    <style>.main-container, .nav-wrapper {display: none;}</style> <!-- Prevents content from showing for a split second --> 
-    <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" --> 
-    <script src="./js/navbar.js"></script>
+    <style>
+        .main-container, .nav-wrapper { display: none;}
+    </style>
+
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <script type="module" src="src/js/preloader.js"></script>
+    <script type="module" src="src/js/navbar.js"></script>
 </head>
 
-<body>
-    <div class="main-container  container-fluid overflow-hidden">
-
-        <!-- Page Title and Categories -->
-        <header class="header d-flex flex-column">
-            <ul class="category-section  list-unstyled">
-                <li class="btn filter" data-filter=".video-item">Video Editing</li>
-                <li class="btn filter" data-filter=".image-item">Graphics Designs</li>
-                <li class="btn filter" data-filter=".web-item">Web Development</li>
-                <li class="btn filter" data-filter="all">All Projects</li>
-            </ul>
+<body class="bg-light scroll scrollbar-custom">
+    <div class="main-container container-fluid overflow-hidden">
+        <!-- Header Section -->
+        <header class="px-5 pt-3 pb-4">
+            <nav class="d-flex gap-1 justify-content-center flex-wrap text-center">
+                <a class="nav-link pe-2" href="#video-editing">Video Editing</a>
+                <a class="nav-link pe-2" href="#graphics-design">Graphics Design</a>
+                <a class="nav-link pe-2" href="#web-development">Web Development</a>
+                <a class="nav-link pe-2" href="#all-projects">All Projects</a>
+            </nav>
         </header>
 
-
-        <!-- Mobile Sidebar -->
-        <div class="mobile-category-items-wrapper  offcanvas offcanvas-start  vh-100 w-100" data-bs-scroll="true"
-            tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-
-            <!-- Sidebar Header -->
-            <div class="offcanvas-header  justify-content-center mt-4">
-                <button type="button" class="btn-close mb-3 w-90" style="font-size: 1.5rem;" data-bs-dismiss="offcanvas"
-                    aria-label="Close"></button>
-            </div>
-
-            <!-- Sidebar Body -->
-            <div class="offcanvas-body">
-                <ul class="category-items vw-100 mb-3  list-unstyled">
-
-                    <!-- Apple Music Covers -->
-                    <li class="apple-music-wrapper button-wrapper" style="cursor: pointer;">
-                        <i id="playIcon" class="fa-solid fa-image"
-                            data-filter=".image-item[data-tag='apple-music']"></i>
-                        <span class="apple-music" data-bs-dismiss="offcanvas"
-                            data-filter=".image-item[data-tag='apple-music']">Apple Music Covers</span>
-                    </li>
-
-                    <!-- Behold the Lamb -->
-                    <li class="behold-the-lamb-wrapper button-wrapper" style="cursor: pointer;">
-                        <span class="dropdown" dropdown-toggle data-bs-toggle="dropdown" aria-expanded="false">
-                            <i id="playIcon" class="fa-solid fa-play"></i>
-                            <i id="playIcon" class="fa-solid fa-image"></i>
-                        </span>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item video" data-bs-dismiss="offcanvas"
-                                    data-filter=".video-item[data-tag='behold-the-lamb']">Videos</a></li>
-                            <li><a class="dropdown-item image" data-bs-dismiss="offcanvas"
-                                    data-filter=".image-item[data-tag='behold-the-lamb']">Images</a></li>
-                        </ul>
-                        <span class="behold-the-lamb" data-bs-dismiss="offcanvas"
-                            data-filter="[data-tag='behold-the-lamb']">Behold, The Lamb</span>
-                    </li>
-
-                    <!-- Challenge Centric -->
-                    <li class="challenge-centric-wrapper button-wrapper" style="cursor: pointer;">
-                        <i id="playIcon" class="fa-solid fa-play"></i>
-                        <span class="challenge-centric" data-bs-dismiss="offcanvas"
-                            data-filter=".video-item[data-tag='challenge-centric']">Challenge Centric</span>
-                    </li>
-
-                    <!-- Foundation of Tri-athletes -->
-                    <li class="foundation-of-triathletes-wrapper button-wrapper" style="cursor: pointer;">
-                        <i id="playIcon" class="fa-solid fa-globe"
-                            data-filter=".web-item[data-tag='foundation-of-triathletes']"></i>
-                        <span class="foundation-of-triathletes"
-                            data-filter=".web-item[data-tag='foundation-of-triathletes']">Foundation of
-                            Tri-athletes</span>
-                    </li>
-
-                    <!-- God Our Only Hope -->
-                    <li class="god-our-only-hope-wrapper button-wrapper" style="cursor: pointer;">
-                        <i id="playIcon" class="fa-solid fa-globe"
-                            data-filter=".web-item[data-tag='god-our-only-hope']"></i>
-                        <span class="god-our-only-hope" data-bs-dismiss="offcanvas"
-                            data-filter=".web-item[data-tag='god-our-only-hope']">"God Our Only Hope" Event Page</span>
-                    </li>
-
-                    <!-- Sounds of Africa -->
-                    <li class="sounds-of-africa-wrapper button-wrapper" style="cursor: pointer;">
-                        <span class="dropdown" dropdown-toggle data-bs-toggle="dropdown" aria-expanded="false">
-                            <i id="playIcon" class="fa-solid fa-play"></i>
-                            <i id="playIcon" class="fa-solid fa-image"></i>
-                        </span>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item video" data-bs-dismiss="offcanvas"
-                                    data-filter=".video-item[data-tag='sounds-of-africa']">Videos</a></li>
-                            <li><a class="dropdown-item image" data-bs-dismiss="offcanvas"
-                                    data-filter=".image-item[data-tag='sounds-of-africa']">Images</a></li>
-                        </ul>
-                        <span class="sounds-of-africa" data-bs-dismiss="offcanvas"
-                            data-filter="[data-tag='sounds-of-africa']">Sounds of Africa: We've Come This Far</span>
-                    </li>
-
-                    <!-- Toastmasters -->
-                    <li class="toastmasters-wrapper button-wrapper" style="cursor: pointer;">
-                        <span class="dropdown" dropdown-toggle type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            <i id="playIcon" class="fa-solid fa-play"></i>
-                            <i id="playIcon" class="fa-solid fa-image"></i>
-                        </span>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item video" data-bs-dismiss="offcanvas"
-                                    data-filter=".video-item[data-tag='toastmasters']">Videos</a></li>
-                            <li><a class="dropdown-item image" data-bs-dismiss="offcanvas"
-                                    data-filter=".image-item[data-tag='toastmasters']">Images</a></li>
-                        </ul>
-                        <span class="toastmasters" data-bs-dismiss="offcanvas"
-                            data-filter="[data-tag='toastmasters']">Toastmasters</span>
-                    </li>
-
-                    <!-- Github (Mobile) -->
-                    <li class="github-wrapper button-wrapper desktop-hide" style="cursor: pointer;">
-                        <i id="playIcon" class="fa-brands fa-github"></i>
-                        <span data-bs-dismiss="offcanvas" class="github"><a href="https://github.com/TerryJG"
-                                target="_blank" style="text-decoration: none; color: #000000;">Github Projects</a>
-                        </span>
-                    </li>
-                </ul>
-                <p style="opacity: 0.6; font-size: 0.9rem; line-height: 5rem; text-align: center; user-select: none;">
-                    Press
-                    <i id="playIcon" class="fa-solid fa-play" style="margin-left: 0.5rem;"></i>
-                    <i id="playIcon" class="fa-solid fa-image" style="margin-right: 0.5rem;"></i>
-                    for additional options
-                </p>
-            </div>
-        </div>
-
-        <!-- Main Desktop Body -->
-        <section id="category-items-wrapper">
-            <ul class="category-items  list-unstyled">
-
-                <!-- Mobile Button Toggle -->
-                <li class="mobile-category-btn button-wrapper desktop-hide" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" style="cursor: pointer;">
-                    <span> <i id="playIcon" class="fa-solid fa-play" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasWithBothOptions"></i> <i id="playIcon"
-                            class="fa-solid fa-image"></i></span>
-                    <span id="showCategory" class="behold-the-lamb" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasWithBothOptions">Show Categories</span>
-                </li>
-
-                <!-- Apple Music Covers -->
-                <li class="apple-music-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <i id="playIcon" class="fa-solid fa-image" data-filter=".image-item[data-tag='apple-music']"></i>
-                    <span class="apple-music" data-filter=".image-item[data-tag='apple-music']">
-                        Apple Music Covers
-                    </span>
-                </li>
-
-                <!-- Behold the Lamb -->
-                <li class="behold-the-lamb-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <span class="dropdown" dropdown-toggle data-bs-toggle="dropdown" aria-expanded="false">
-                        <i id="playIcon" class="fa-solid fa-play"></i>
-                        <i id="playIcon" class="fa-solid fa-image"></i>
-                    </span>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item video"
-                                data-filter=".video-item[data-tag='behold-the-lamb']">Videos</a></li>
-                        <li><a class="dropdown-item image"
-                                data-filter=".image-item[data-tag='behold-the-lamb']">Images</a></li>
-                    </ul>
-                    <span class="behold-the-lamb" data-filter="[data-tag='behold-the-lamb']">Behold, The Lamb</span>
-                </li>
-
-                <!-- Challenge Centric -->
-                <li class="challenge-centric-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <i id="playIcon" class="fa-solid fa-play"></i>
-                    <span class="challenge-centric" data-bs-dismiss="offcanvas"
-                        data-filter=".video-item[data-tag='challenge-centric']">Challenge Centric</span>
-                </li>
-
-                <!-- Foundation of Tri-athletes -->
-                <li class="foundation-of-triathletes-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <i id="playIcon" class="fa-solid fa-globe"
-                        data-filter=".web-item[data-tag='foundation-of-triathletes']"></i>
-                    <span class="foundation-of-triathletes"
-                        data-filter=".web-item[data-tag='foundation-of-triathletes']">Foundation of Tri-athletes</span>
-                </li>
-
-                <!-- God Our Only Hope -->
-                <li class="god-our-only-hope-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <i id="playIcon" class="fa-solid fa-globe"
-                        data-filter=".web-item[data-tag='god-our-only-hope']"></i>
-                    <span class="god-our-only-hope" data-filter=".web-item[data-tag='god-our-only-hope']">"God Our Only
-                        Hope" Event Page</span>
-                </li>
-
-                <!-- Sounds of Africa -->
-                <li class="sounds-of-africa-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <span class="dropdown" dropdown-toggle data-bs-toggle="dropdown" aria-expanded="false">
-                        <i id="playIcon" class="fa-solid fa-play"></i>
-                        <i id="playIcon" class="fa-solid fa-image"></i>
-                    </span>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item video"
-                                data-filter=".video-item[data-tag='sounds-of-africa']">Videos</a></li>
-                        <li><a class="dropdown-item image"
-                                data-filter=".image-item[data-tag='sounds-of-africa']">Images</a></li>
-                    </ul>
-                    <span class="sounds-of-africa" data-filter="[data-tag='sounds-of-africa']">Sounds of Africa: We've
-                        Come This Far</span>
-                </li>
-
-                <!-- Toastmasters -->
-                <li class="toastmasters-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <span class="dropdown" dropdown-toggle type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i id="playIcon" class="fa-solid fa-play"></i>
-                        <i id="playIcon" class="fa-solid fa-image"></i>
-                    </span>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item video" data-filter=".video-item[data-tag='toastmasters']">Videos</a>
-                        </li>
-                        <li><a class="dropdown-item image" data-filter=".image-item[data-tag='toastmasters']">Images</a>
-                        </li>
-                    </ul>
-                    <span class="toastmasters" data-filter="[data-tag='toastmasters']">Toastmasters</span>
-                </li>
-
-                <!-- Github (Desktop) -->
-                <li class="github-wrapper button-wrapper mobile-hide" style="cursor: pointer;">
-                    <i id="playIcon" class="fa-brands fa-github"></i>
-                    <span class="category-button github" data-filter="[data-tag='github']">Github Projects</span>
-                </li>
-            </ul>
-            </ul>
-            <div class="additional-info mb-5 mobile-hide" style="user-select: none;">
-                <p style="opacity: 0.5; font-size: 0.9rem; text-align: center;">(Press
-                    <i id="playIcon" class="fa-solid fa-play" style="margin-left: 0.5rem;"></i>
-                    <i id="playIcon" class="fa-solid fa-image" style="margin-right: 0.5rem;"></i>
-                    for additional options)
-                </p>
+        <!-- Desktop Category Menu -->
+        <section id="category-items-wrapper" class="section">
+            <div class="category-list d-flex flex-wrap gap-2 pb-3 justify-content-center">
+                <!-- Dynamic content will be inserted here by projects.fetchContent-mixItUp-filtering.js -->
             </div>
         </section>
 
-        <script> // Checks all classes in array for 'mixitup-control-active'. If present, add 'active' to class
-            $(document).ready(function () {
-                const categoryNames = [".apple-music-wrapper", ".behold-the-lamb-wrapper", ".challenge-centric-wrapper",
-                    ".foundation-of-triathletes-wrapper", ".god-our-only-hope-wrapper", ".sounds-of-africa-wrapper", ".toastmasters-wrapper",
-                    ".github-wrapper"];
+        <!-- Content Grid -->
+        <div class="max-width-container">
+            <div class="grid-wrapper col-auto">
+                <!-- Dynamic content will be inserted here by projects.fetchContent-mixItUp-filtering.js -->
+            </div>
+        </div>
 
-                $(categoryNames.join(', ')).on('click', function (event) {
-                    const clickedElement = $(this);
-
-                    clickedElement.addClass('active');
-                    $(categoryNames.join(', ')).not(clickedElement).removeClass('active'); // Remove 'active' class from all other elements in the array
-
-                    event.stopPropagation();
-                });
-            });
-        </script>
-
-        <div class="max-width-container ">
-            <div class="grid-wrapper  col-auto">
-                <!-- JSON GENERATED CONTENT WILL GO HERE -->
+        <!-- Loading Spinner -->
+        <div id="loading-spinner" class="text-center my-5 d-none">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
             </div>
         </div>
     </div>
-    <!-- Spacing for bottom -->
-    <footer class="footer-wrapper  text-center" style="background-color: rgba(0, 0, 0, 0); height: 70px;"></footer>
-    </div>
 
     <!-- Fancybox Settings -->
-    <script type="text/javascript" src="./js/fancybox-settings.js">
+    <script type="module" src="src/js/fancybox-settings.js">
     </script>
 
     <!-- On mousehover, fade out thumbnail & play .webm preview // Disabled when viewed on screens <=768px -->
-    <script type="text/javascript" src="./js/thumbnail-hover.js">
+    <script type="module" src="src/js/thumbnail-hover.js">
     </script>
 </body>
 </html>

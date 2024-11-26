@@ -2,41 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Credits</title>
-    <link rel="icon" type="image/x-icon" href="content\icons\favicon.ico">
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- Metadata for link preview -->
-    <meta property="og:title" content="Terrance Gibson | Digital Portfolio">
-    <meta property="og:description" content="Digital portfolio - Credits">
-    <meta property="og:image" content="content\icons\link_thumbnail.jpg">
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:url" content="https://madebyterrance.pages.dev/">
-    <meta name="theme-color" content="#212529">
+    <!-- Header metadata -->
+    <script type="module" src="src/js/header.js"></script>
 
     <!-- Bootstrap 5.3.2 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Fancybox 5 (Video & Image Gallery) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script>
 
     <!-- Font Awesome Fonts (for icons) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <link rel="stylesheet" href="css\credits.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
     <style>
         .main-container, .nav-wrapper { display: none; }
-    </style> <!-- Prevents content from showing for a split second -->
-    <script src="./js/preloader.js"></script> <!-- JS will handle changing display to "block" -->
-    <script src="./js/navbar.js"></script>
+    </style>
+
+    <link rel="stylesheet" href="src/css/credits.css">
+
+    <link rel="stylesheet" href="src/css/scrollbar.css">
+    <script type="module" src="src/js/preloader.js"></script>
+    <script type="module" src="src/js/navbar.js"></script>
 </head>
 
-<body>
+<body class="scroll scrollbar-custom">
     <div class="main-container mt-5">
         <summary class="text-center  mt-3  d-flex justify-content-center">
             <p class="fs-6 w-50" style="cursor: default;">Website design and coding made by Terrance Gibson.
@@ -68,7 +63,7 @@
 
                 <li>
                     <img class="mt-4 mb-2" style="width: 12rem; border-radius: 5px;"
-                        src="content\icons\commontools-logo.svg">
+                        src="src/content/icons/commontools-logo.svg">
                     <p class="display-8 mb-0 lh-1 fw-light">FROM COMMONTOOLS
                     <p class="display-6 mb-0 fw-bold"><a id="gradient-generator"
                             href="https://www.commontools.org/tool/animated-gradient-background-generator-29">ANIMATED
@@ -78,7 +73,7 @@
 
                 <li>
                     <img class="mt-2 mb-3" style="width: 3rem; border-radius: 5px;"
-                        src="content\icons\fancybox-icon.svg">
+                        src="src/content/icons/fancybox-icon.svg">
                     <p class="display-8 mb-0 lh-1 fw-light">FROM FANCYAPPS
                     <p class="display-6 mb-0 fw-bold"><a id="fancybox-1" href="https://fancyapps.com/">FANCY<span
                                 id="fancybox-2">BOX</span></a></p>
@@ -99,16 +94,8 @@
                 </li>
 
                 <li>
-                    <img class="mt-2" style="width: 3.5rem;" src="content\icons\live-canvas-preview-color.png">
-                    <p class="display-6 mb-0 fw-bold"><a id="live-canvas-1"
-                            href="https://library.livecanvas.com/">LIVE<span id="live-canvas-2">CANVAS</span></a></p>
-                    <p class="mb-5 fs-6">Bootstrap 5 Builder & Template Library (base template used for <a
-                            class="text-decoration-none" href="projects.html">Projects</a>)</p>
-                </li>
-
-                <li>
                     <img class="mt-2 mb-2" style="width: 3rem; border-radius: 5px;"
-                        src="content\icons\kunka-labs-mixitup-color.png">
+                        src="src/content/icons/kunka-labs-mixitup-color.png">
                     <p class="display-8 mb-0 lh-1 fw-light">FROM KUNKA LABS
                     <p class="display-6 mb-0 fw-bold"><a id="mix-it-up"
                             href="https://www.kunkalabs.com/mixitup/">MIXITUP</a></p>
@@ -117,24 +104,18 @@
 
                 <li>
                     <img class="mt-2 mb-n1" style="width: 4rem; border-radius: 5px;"
-                        src="content\icons\cloudflare-icon.png">
+                        src="src/content/icons/cloudflare-icon.png">
                     <p class="display-8 mb-0 lh-1 fw-light">FROM CLOUDFLARE
                     <p class="display-6 mb-0 fw-bold"><a id="cloudflare"
                             href="https://pages.cloudflare.com/">CLOUDEFLARE PAGES</a></p>
                     <p class="mb-5 fs-6">Content Delivery Network & Web Hosting</p>
                 </li>
 
-                <li>
-                    <img class="mt-2 mb-2" style="width: 3rem; border-radius: 5px;" src="content\icons\splide-icon.svg">
-                    <p class="display-6 mb-0 fw-bold"><a id="splide" href="https://splidejs.com/">SPLIDE</a></p>
-                    <p class="mb-5 fs-6">Image Gallery Library</p>
-                </li>
-
                 <hr> <!-- Line -->
 
                 <li>
                     <img class="mt-4 mb-2" style="width: 3rem; border-radius: 5px; filter: grayscale(20%);"
-                        src="content\icons\shutter-icon.png">
+                        src="src/content/icons/shutter-icon.png">
                     <p class="display-6 mb-0 fw-bold">SHUTTER ENCODER</p>
                     <p class="mb-5 fs-6">Image & Video Encoding Software</p>
                 </li>
@@ -143,7 +124,7 @@
                     <div class="photoshop" style="margin-right: 5rem;">
                         <li>
                             <img class="mt-2 mb-2" style="width: 3.5rem; border-radius: 5px;"
-                                src="content\icons\adobe-photoshop-cc-icon.svg">
+                                src="src/content/icons/adobe-photoshop-cc-icon.svg">
                             <p class="display-8 mb-0 lh-1 fw-light">FROM ADOBE
                             <p class="display-6 mb-0 fw-bold">PHOTOSHOP</p>
                             <p class="fs-6">Image Editing Software</p>
@@ -153,7 +134,7 @@
                     <div class="premiere-pro">
                         <li>
                             <img class="mt-2 mb-2" style="width: 3.5rem; border-radius: 5px;"
-                                src="content\icons\adobe-premiere-pro-cc-icon.svg">
+                                src="src/content/icons/adobe-premiere-pro-cc-icon.svg">
                             <p class="display-8 mb-0 lh-1 fw-light">FROM ADOBE
                             <p class="display-6 mb-0 fw-bold">PREMIERE PRO</p>
                             <p class="fs-6">Non-linear Video Editing Software</p>
