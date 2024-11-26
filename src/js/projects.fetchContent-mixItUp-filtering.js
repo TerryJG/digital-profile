@@ -204,7 +204,8 @@ class PortfolioDB {
 
     // If tbe accentColor matches any of the ones defined in this object, invert the colors. This is to prevent white text appearing without a black background
     const invertedAccentedColors = {
-      '18181b': '#000'
+      '18181b': '#000',
+      'ebe5c1': '#000'
     };
 
     this.categories
